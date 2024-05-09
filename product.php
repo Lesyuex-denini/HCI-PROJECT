@@ -118,11 +118,11 @@
             }
         
             .grid-item img {
-                transition: transform 0.1s ease-in-out; /* Add transition to image */
+                transition: transform 0.1s ease-in-out; 
             }
         
             .grid-item:hover img {
-                transform: scale(1.1); /* Enlarge the image on hover */
+                transform: scale(1.1); 
             }
         }
         
@@ -148,8 +148,8 @@
             border: none;
             float: right;
             position: fixed;
-            bottom: 20px; /* Adjust as needed */
-            right: 20px; /* Adjust as needed */
+            bottom: 20px; 
+            right: 20px; 
             z-index: 9999;
         }
         
@@ -207,14 +207,11 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-purple">
     <div class="container-fluid">
-    <img src="shophearlogo.gif" alt="Logo" class="navbar-logo super-small-logo">
-      <!-- Logo -->
+    <img src="images/shophearlogo.gif" alt="Logo" class="navbar-logo super-small-logo">
       <a class="navbar-brand" href="#">ShopHear</a>
-      <!-- Toggle button for small screens -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Navigation links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">

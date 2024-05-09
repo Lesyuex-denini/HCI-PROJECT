@@ -9,7 +9,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopHear</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -45,20 +44,17 @@
 <body>
     <div class="fullscreen-img">
         <a href="signup.php">
-            <img src="shophear.gif" alt="ShopHear">
+            <img src="images/shophear.gif" alt="ShopHear">
         </a>
     </div>
 
-    <!-- Bootstrap JS and Popper.js (required for Bootstrap's JavaScript plugins) -->
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Simple JavaScript for form validation -->
     <script>
         var imageLink = document.querySelector('.fullscreen-img a');
         imageLink.addEventListener('click', function (event) {
-            // Handle click event here, such as redirecting to the signup page
-            event.preventDefault(); // Prevent the default link behavior
-            window.location.href = imageLink.href; // Redirect to the signup page
+            event.preventDefault(); 
+            window.location.href = imageLink.href; 
         });
     </script>
 </body>

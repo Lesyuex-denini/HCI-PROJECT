@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome CSS for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,19 +13,24 @@
       letter-spacing: 2px;
       text-align: center;
       font-size: 16px;
-  }
+    }
+    body{
+        background-image: url(images/about-bg.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
   </style>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-purple">
     <div class="container-fluid">
-    <img src="shophearlogo.gif" alt="Logo" class="navbar-logo super-small-logo">
-      <!-- Logo -->
+    <img src="images/shophearlogo.gif" alt="Logo" class="navbar-logo super-small-logo">
       <a class="navbar-brand" href="#">ShopHear</a>
-      <!-- Toggle button for small screens -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <!-- Navigation links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -48,9 +51,7 @@
     </div>
   </nav>
 
-  <!-- About Section -->
   <div class="container mt-5">
-    <!-- Shophear Section -->
     <section class="invisible-bg">
       <div class="section-title">
         <h2>About Shophear</h2>
@@ -64,8 +65,6 @@
       </div>
     </section>
     
-
-    <!-- Why Buy Section -->
     <section class="invisible-bg">
       <div class="section-title">
         <h2>Why ShopHear?</h2>
@@ -83,7 +82,6 @@
       </div>
     </section>
 
-    <!-- The Team Section -->
     <section class="invisible-bg">
       <div class="section-title">
         <h2>The Team</h2>
@@ -91,18 +89,18 @@
       <div class="section-content">
         <div class="row">
           <div class="col-md-4 team-member">
-            <img src="milacute.jpg" alt="Team Member 1">
+            <img src="images/milacute.jpg" alt="Team Member 1">
             <h4>Ma. Milagros E. Abadinas</h4>
             <p>Role: Designer</p>
           </div>
           <div class="col-md-4 team-member">
-            <img src="lloyd.jpg" alt="Team Member 2">
+            <img src="images/lloyd.jpg" alt="Team Member 2">
             <h4>Lloyd Aldrich A. Angara</h4>
             <p>Role: Developer</p>
           </div>
           <div class="col-md-4 team-member">
-            <img src="rubymain.png" alt="Team Member 3">
-            <h4>Ruby Ann A. Amate</h4>
+            <img src="images/rubymain.png" alt="Team Member 3">
+            <h4>Ruby Ann S. Amate</h4>
             <p>Role: Marketing</p>
           </div>
         </div>
@@ -111,7 +109,6 @@
   </div>
 
 
-    <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
       <p>&copy; 2024 Your Website</p>
@@ -123,9 +120,8 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS (optional, for dropdowns, toggles, etc.) -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Font Awesome JS for icons -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 </html>

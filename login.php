@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $loginPassword = $_POST['loginPassword'];
 
     if (!empty($loginUsername) && !empty($loginPassword)) {
-        // Check if the username exists in the database
         $query = "SELECT * FROM users WHERE name = ?";
         $stmt = $conn->prepare($query);
         $stmt->bind_param("s", $loginUsername);
@@ -15,15 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $result = $stmt->get_result();
 
         if ($result->num_rows == 1) {
-            // Username exists, now check if the password matches
             $row = $result->fetch_assoc();
             $hashedPassword = $row['password_hash'];
 
             if (password_verify($loginPassword, $hashedPassword)) {
-                // Password matches, set session and redirect to home.php
                 $_SESSION['login'] = true;
-                $_SESSION['username'] = $row['name']; // Set the username in the session
-                $_SESSION['user_id'] = $row['id']; // Assuming 'id' is the column name for the user ID in your databa
+                $_SESSION['username'] = $row['name']; 
+                $_SESSION['user_id'] = $row['id'];
                 header("Location: home.php");
             } else {
                 echo "Incorrect password";
@@ -46,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -56,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         body {
             background-color: #AD88C6;
-            background-image: url('yellow-bg.png');
+            background-image: url('images/yellow-bg.png');
             background-size: cover; 
             background-repeat: no-repeat;
             background-attachment: fixed; 

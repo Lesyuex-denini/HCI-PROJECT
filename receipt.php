@@ -109,7 +109,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.querySelector('form');
         form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the form from submitting by default
+            event.preventDefault(); 
             if (validateForm()) {
                 showSuccessMessage();
             }

@@ -9,12 +9,25 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .landing-page {
+    background-image: url('images/background.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: white;
+    text-align: left; 
+    padding: 20% 5%; 
+    margin-top: -70px; 
+    height: 100vh;
+  }
+  </style>
 
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-purple">
     <div class="container-fluid">
-    <img src="shophearlogo.gif" alt="Logo" class="navbar-logo super-small-logo">
+    <img src="images/shophearlogo.gif" alt="Logo" class="navbar-logo super-small-logo">
       <a class="navbar-brand" href="#">ShopHear</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,8 +51,7 @@
       </div>
     </div>
   </nav>
-  
-  <!-- Landing Page Content -->
+
   <div class="landing-page">
     <div class="container">
       <h1 class="typewriter">SHOPHEAR</h1>
@@ -47,12 +59,11 @@
     </div>
   </div>
 
-    <!-- Yellow Section -->
     <div class="yellow-sectionn">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
-          <img src="model.gif" alt="Image Description" class="img-fluid smaller-image">
+          <img src="images/model.gif" alt="Image Description" class="img-fluid smaller-image">
         </div>
         <div class="col-md-6">
           <div class="rounded p-4 yellow-text-bg">
@@ -68,7 +79,6 @@
   </div>
 
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
       <p>&copy; 2024 Your Website</p>
@@ -80,9 +90,8 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS (optional, for dropdowns, toggles, etc.) -->
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Font Awesome JS for icons -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 </html>

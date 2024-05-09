@@ -28,7 +28,7 @@ body {
 
   /*homepage*/
   .landing-page {
-    background-image: url('background.png');
+    background-image: url('images/background.png');
     background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed; 
@@ -69,35 +69,35 @@ body {
  
   @media only screen and (max-width: 768px) {
     .landing-page {
-        padding: 15% 5%; /* Adjusted padding for smaller screens */
+        padding: 15% 5%; 
     }
 
     .typewriter {
-        font-size: 110px; /* Further adjusted font size for smaller screens */
-        height: 12vh; /* Further adjusted height for smaller screens */
+        font-size: 110px; 
+        height: 12vh; 
         margin-top: 300px
     }
 
     .write {
         margin-top: 30px;
-        font-size: 22px; /* Further adjusted font size for smaller screens */
-        letter-spacing: 3px; /* Further adjusted letter spacing for smaller screens */
+        font-size: 22px;
+        letter-spacing: 3px; 
     }
 }
 
     @media only screen and (max-width: 480px) {
         .landing-page {
-            padding: 10% 5%; /* Further adjusted padding for even smaller screens */
+            padding: 10% 5%; 
         }
 
         .typewriter {
-            font-size: 50px; /* Further adjusted font size for even smaller screens */
-            height: 7vh; /* Further adjusted height for even smaller screens */
+            font-size: 50px; 
+            height: 7vh; 
         }
 
         .write {
-            font-size: 18px; /* Further adjusted font size for even smaller screens */
-            letter-spacing: 2px; /* Further adjusted letter spacing for even smaller screens */
+            font-size: 18px; 
+            letter-spacing: 2px; 
         }
     }
       .blue-section {
@@ -150,15 +150,15 @@ body {
       }
       @media only screen and (max-width: 768px) {
         .yellow-text {
-            font-size: 14px; /* Adjust font size for smaller screens */
-            letter-spacing: 2px; /* Adjust letter spacing for smaller screens */
+            font-size: 14px; 
+            letter-spacing: 2px; 
         }
       }
   
       @media only screen and (max-width: 480px) {
           .yellow-text {
-              font-size: 14px; /* Further adjust font size for even smaller screens */
-              letter-spacing: 1px; /* Further adjust letter spacing for even smaller screens */
+              font-size: 14px; 
+              letter-spacing: 1px; 
           }
       }
  

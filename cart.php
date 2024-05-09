@@ -53,10 +53,10 @@ session_start();
             border-collapse: collapse;
             border-radius: 10px;
             overflow: hidden;
-            background-color: rgba(255, 255, 255, 0.5); /* Add transparency */
-            backdrop-filter: blur(10px); /* Add blur effect */
-            border-radius: 15px; /* Add border radius */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+            background-color: rgba(255, 255, 255, 0.5); 
+            backdrop-filter: blur(10px); 
+            border-radius: 15px; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
         }
         th, td {
             border-bottom: 1px solid #dee2e6;
@@ -64,9 +64,9 @@ session_start();
             font-size: 20px;
         }
         th {
-            background-color: rgba(255, 255, 255, 0.5); /* Add transparency */
-            backdrop-filter: blur(10px); /* Add blur effect */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+            background-color: rgba(255, 255, 255, 0.5); 
+            backdrop-filter: blur(10px); 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             align-items: center;
             justify-content: center;
             text-align: center;
@@ -155,14 +155,11 @@ session_start();
 <body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-purple">
     <div class="container-fluid">
-    <img src="shophearlogo.gif" alt="Logo" class="navbar-logo super-small-logo">
-      <!-- Logo -->
+    <img src="images/shophearlogo.gif" alt="Logo" class="navbar-logo super-small-logo">
       <a class="navbar-brand" href="#">ShopHear</a>
-      <!-- Toggle button for small screens -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Navigation links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
@@ -219,13 +216,11 @@ session_start();
                     $result = mysqli_query($link, $sql);
                 }
 
-                // Attempt select query execution
+            
                 $sql = "SELECT * FROM transaction";
                 $result = mysqli_query($link, $sql);
                 if ($result) {
-                    // Check if there are rows returned
                     if (mysqli_num_rows($result) > 0) {
-                        // Output data of each row
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo '<tr>';
                             echo '<td><input type="checkbox" class="order-checkbox"></td>';
@@ -279,40 +274,36 @@ session_start();
             });
 
             $(document).ready(function() {
-    // Function to update the total bill amount
-    function updateTotalBill() {
-        var totalBill = 0;
-        $('.order-checkbox:checked').each(function() {
-            var itemPrice = parseFloat($(this).closest('tr').find('td:eq(4)').text());
-            totalBill += itemPrice;
+            function updateTotalBill() {
+                var totalBill = 0;
+                $('.order-checkbox:checked').each(function() {
+                    var itemPrice = parseFloat($(this).closest('tr').find('td:eq(4)').text());
+                    totalBill += itemPrice;
+                });
+                $('#totalBillAmount').text(totalBill.toFixed(2)); 
+                localStorage.setItem('totalBill', totalBill);
+            }
+
+            updateTotalBill();
+
+            $('.order-checkbox').change(function() {
+                updateTotalBill(); 
+            });
+
+            $('#orderNowBtn').click(function() {
+                var selectedItems = [];
+                $('.order-checkbox:checked').each(function() {
+                    selectedItems.push($(this).closest('tr').find('.edit-btn').data('id'));
+                });
+
+                if (selectedItems.length === 0) {
+                    alert('No item was selected.');
+                    return; 
+                }
+
+                window.location.href = 'order.php?items=' + selectedItems.join(',');
+            });
         });
-        $('#totalBillAmount').text(totalBill.toFixed(2)); // Update the total bill amount
-        // Update totalBill in localStorage
-        localStorage.setItem('totalBill', totalBill);
-    }
-
-    // Initial call to update total bill amount
-    updateTotalBill();
-
-    $('.order-checkbox').change(function() {
-        updateTotalBill(); // Call the function to update the total bill amount
-    });
-
-    $('#orderNowBtn').click(function() {
-        var selectedItems = [];
-        $('.order-checkbox:checked').each(function() {
-            selectedItems.push($(this).closest('tr').find('.edit-btn').data('id'));
-        });
-
-        // Check if no item was selected
-        if (selectedItems.length === 0) {
-            alert('No item was selected.');
-            return; // Stop further execution
-        }
-
-        window.location.href = 'order.php?items=' + selectedItems.join(',');
-    });
-});
 
     </script>
     <script>
