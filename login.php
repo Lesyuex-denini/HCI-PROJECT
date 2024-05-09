@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['login'] = true;
                 $_SESSION['username'] = $row['name']; // Set the username in the session
                 $_SESSION['user_id'] = $row['id']; // Assuming 'id' is the column name for the user ID in your databa
-                header("Location: cocktails.php");
+                header("Location: home.php");
             } else {
                 echo "Incorrect password";
             }
@@ -81,8 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             z-index: -1;
         }
         .box p {
-            font-size: 180px; /* Increased font size */
-            font-weight: bold; /* Added bold font weight */
+            font-size: 180px; 
+            font-weight: bold; 
             text-transform: uppercase;
             color: #bb7781;
             text-shadow: 0 0 0 transparent,
@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         input {
             background: rgba(0, 0, 0, 0.5) !important;
-            color: #FAF9F6 !important; /* Change to the desired text color */
+            color: #FAF9F6 !important; 
             border: 1px solid #FAF9F6 !important;
             padding: 10px !important;
             margin: 5px !important;
@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         header {
             margin: 0;
             padding: 0;
-            background-color: transparent; /* Set background color to transparent */
+            background-color: transparent;
         }
         h2{
             text-align: center;
@@ -137,11 +137,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             z-index: 2;
         }
         .or-divider {
+            letter-spacing: 2px;
+            font-size: 18px;
             font-weight: bold;
             margin-left: 7px;
             margin-right: 7px;
             align-self: center;
-            color: #FAF9F6; /* Set the text color to black or a color that contrasts well with your background */
+            color: #FAF9F6; 
             font-family: 'Varela Round', sans-serif;
         }
         .signcontainer {
@@ -159,157 +161,154 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         .col-md-6 {
         text-align: center;
-        margin: 50px; /* Add margin to the form container */
+        margin: 50px; 
         }   
         .container mt-5{
             margin-top: 20px;
         }
 
         #signupForm {
-            text-align: left; /* Align the text to the left within the form */
-            max-width: 350px; /* Set a maximum width for the form if needed */
-            margin: auto; /* Center the form horizontally */
+            text-align: left; 
+            max-width: 350px; 
+            margin: auto; 
             margin-top: -50px;
         }
 
         #signupForm label {
-            color: #37062b;
+            color: #fff; 
         }
         :root {
-    --clr-neon: hsl(346, 100%, 50%);
-    --clr-bg: hsl(0, 0%, 0%);
-    }
-    .signup {
-    text-transform: uppercase;
-    font-family: 'zen tokyo zoo', sans-serif;
-    background: #37062b;
-    font-size: 15px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--clr-neon);
-    border: var(--clr-neon) 0.125em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-    margin-left: 11px;
-    width: 130px;
-    height: 50px;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-    position: relative;
-    }
+            --clr-neon: hsl(530, 70%, 80%); 
+            --clr-bg: hsl(0, 0%, 0%);
+        }
+        .signup {
+            letter-spacing: 3px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Varela Round';
+            background: #37062b;
+            font-size: 15px;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            color: #FAF9F6;
+            border: #bb7781;
+            padding: 0.25em 1em;
+            border-radius: 0.25em;
+            margin-left: 11px;
+            width: 130px;
+            height: 50px;
+            text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+            position: relative;
+        }
 
     .signup::before {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    background: var(--clr-neon);
-    top: 90%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    transform: perspective(3em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1em);
-    opacity: 0.7;
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        background: #bb7781;
+        top: 90%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: perspective(3em) rotateX(40deg) scale(1, 0.35);
+        filter: blur(1em);
+        opacity: 0.7;
     }
 
     .signup::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 2em 0.5em var(--clr-neon);
-    opacity: 0;
-    background-color: var(--clr-neon);
-    z-index: -1;
-    transition: opacity 100ms linear;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 2em 0.5em var(--clr-neon);
+        opacity: 0;
+        background-color: #bb7781;
+        z-index: -1;
+        transition: opacity 100ms linear;
     }
 
     .signup:hover,
     .signup:focus {
-    color: var(--clr-bg);
-    text-shadow: none;
+        color: #bb7781;
+        text-shadow: none;
     }
 
     .signup:hover::before,
     .signup:focus::before {
-    opacity: 1;
+        opacity: 1;
     }
     .signup:hover::after,
     .signup:focus::after {
-    opacity: 1;
+        opacity: 1;
     }
     .login {
-    text-transform: uppercase;
-    font-family: 'zen tokyo zoo', sans-serif;
-    background: rgba(0, 0, 0, 0.5) !important;
-    font-size: 15px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--clr-neon);
-    border: var(--clr-neon) 0.125em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-    margin-left: 6px;
-    width: 130px;
-    height: 50px;
-
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-
-    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-
-    position: relative;
+        letter-spacing: 3px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'Varela Round';
+        background: #37062b;
+        font-size: 15px;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        color: #FAF9F6;
+        border: #bb7781;
+        padding: 0.25em 1em;
+        border-radius: 0.25em;
+        margin-left: 6px;
+        width: 130px;
+        height: 50px;
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+        position: relative;
     }
 
     .login::before {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    background: var(--clr-neon);
-    top: 90%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    transform: perspective(3em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1em);
-    opacity: 0.7;
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        background: #bb7781;
+        top: 90%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: perspective(3em) rotateX(40deg) scale(1, 0.35);
+        filter: blur(1em);
+        opacity: 0.7;
     }
 
     .login::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 2em 0.5em var(--clr-neon);
-    opacity: 0;
-    background-color: var(--clr-neon);
-    z-index: -1;
-    transition: opacity 100ms linear;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 2em 0.5em var(--clr-neon);
+        opacity: 0;
+        background-color: #bb7781;
+        z-index: -1;
+        transition: opacity 100ms linear;
     }
 
     .login:hover,
     .login:focus {
-    color: var(--clr-bg);
-    text-shadow: none;
+        color: #bb7781;
+        text-shadow: none;
     }
-
     .login:hover::before,
     .login:focus::before {
-    opacity: 1;
+        opacity: 1;
     }
     .login:hover::after,
     .login:focus::after {
-    opacity: 1;
+        opacity: 1;
     }
 
 
-h2 {
+    h2 {
             margin-top: -30px;
             margin-bottom: 80px;
             display: grid;
@@ -317,7 +316,7 @@ h2 {
              font-family: 'zen tokyo zoo', sans-serif;
              z-index: -1;
         }
-        h2{
+    h2{
             font-size: 30px;
             text-transform: uppercase;
             color: #ffd9e2;
@@ -352,63 +351,63 @@ h2 {
             }
         }
 
-@media (max-width: 768px) {
-    .box {
-        margin-top: 30px;
+    @media (max-width: 768px) {
+        .box {
+            margin-top: 30px;
+        }
+
+        .box p {
+            font-size: 70px;
+        }
     }
 
-    .box p {
-        font-size: 70px;
+    @media (max-width: 576px) {
+        .box p {
+            font-size: 60px;
+        }
     }
-}
 
-@media (max-width: 576px) {
-    .box p {
-        font-size: 60px;
-    }
-}
+        </style>
+    </head>
 
-    </style>
-</head>
+    <body>
+        <div class="box">
+            <p>SHOPHEAR</p>
+        </div>
 
-<body>
-    <div class="box">
-        <p>SHOPHEAR</p>
-    </div>
+        <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 sample">
+            <form id="signupForm" method="POST" action="login.php">
+        <div class="mb-3">
+            <label for="signupUsername" class="form-label">Username:</label>
+            <input type="text" class="form-control" id="signupUsername" name="loginUsername" required>
+        </div>
+        <div class="mb-3">
+            <label for="signupPassword" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="signupPassword" name="loginPassword" required>
+        </div>
+        <div class="mt-3 text-center d-flex flex-column align-items-center">
+            <div class="btn-group mx-auto">
+                <button type="submit" class="login" id="log">Login</button>
+            </div>
+        </div>
+        <div class="mt-3 text-center d-flex flex-column align-items-center">
+            <div class="btn-group">
+                <span class="or-divider">don't have an account? <span><br>
+                <button type="button" onclick="window.location.href='signup.php'" class="signup">Sign Up</button>
+                
+            </div>
+        </div>
+        
+    </form>
 
-    <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6 sample">
-        <form id="signupForm" method="POST" action="login.php">
-    <div class="mb-3">
-        <label for="signupUsername" class="form-label">Username:</label>
-        <input type="text" class="form-control" id="signupUsername" name="loginUsername" required>
-    </div>
-    <div class="mb-3">
-        <label for="signupPassword" class="form-label">Password:</label>
-        <input type="password" class="form-control" id="signupPassword" name="loginPassword" required>
-    </div>
-    <div class="mt-3 text-center d-flex flex-column align-items-center">
-        <div class="btn-group mx-auto">
-            <button type="submit" class="login" id="log">Login</button>
+            </div>
         </div>
     </div>
-    <div class="mt-3 text-center d-flex flex-column align-items-center">
-        <div class="btn-group">
-            <span class="or-divider">don't have an account? <span><br>
-            <button type="button" onclick="window.location.href='signup.php'" class="signup">Sign Up</button>
-            
-        </div>
-    </div>
-    
-</form>
 
-        </div>
-    </div>
-</div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-</body>
-
-</html>
+    </html>

@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Varela+Round&family=Zen+Tokyo+Zoo&display=swap');
 
         body {
-            background-color: #000000;
+            background-color: #BA90C6;
             margin: 0;
             padding: 0;
         }
@@ -73,24 +73,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             margin-top: 20px;
             display: grid;
             place-items: center;
-             font-family: 'zen tokyo zoo', sans-serif;
-             z-index: -1;
+            font-family: 'Varela Round', sans-serif;
+            z-index: -1;
         }
         .box p{
-            font-size: 80px;
+            font-weight: bold;
+            font-size: 100px;
             text-transform: uppercase;
-            color: #ffd9e2;
-            text-shadow: 0 0 0 transparent,
-                        0 0 10px #ff003c,
-                        0 0 20px rgba(255, 0, 60, 0.5),
-                        0 0 40px #ff003c,
-                        0 0 100px #ff003c,
-                        0 0 200px #ff003c,
-                        0 0 300px #ff003c,
-                        0 0 500px #ff003c,
-                        0 0 1000px #ff003c;
-
-                animation: animate 3s infinite alternate;
+            color: #F3BCC8;
+            animation: animate 4s infinite alternate;
         }
 
         @keyframes animate{
@@ -166,213 +157,195 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             color: #FAF9F6;
         }
         :root {
-  --clr-neon: hsl(346, 100%, 50%);
-  --clr-bg: hsl(0, 0%, 0%);
-}
-.signup {
-  text-transform: uppercase;
-  font-family: 'zen tokyo zoo', sans-serif;
-  background: rgba(0, 0, 0, 0.5) !important;
-  font-size: 15px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--clr-neon);
-  border: var(--clr-neon) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  margin-left: 11px;
-  width: 130px;
-  height: 50px;
-
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-
-  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-
-  position: relative;
-}
-
-.signup::before {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  background: var(--clr-neon);
-  top: 90%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  transform: perspective(3em) rotateX(40deg) scale(1, 0.35);
-  filter: blur(1em);
-  opacity: 0.7;
-}
-
-.signup::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: 0 0 2em 0.5em var(--clr-neon);
-  opacity: 0;
-  background-color: var(--clr-neon);
-  z-index: -1;
-  transition: opacity 100ms linear;
-}
-
-.signup:hover,
-.signup:focus {
-  color: var(--clr-bg);
-  text-shadow: none;
-}
-
-.signup:hover::before,
-.signup:focus::before {
-  opacity: 1;
-}
-.signup:hover::after,
-.signup:focus::after {
-  opacity: 1;
-}
-.login {
-  text-transform: uppercase;
-  font-family: 'zen tokyo zoo', sans-serif;
-  background: rgba(0, 0, 0, 0.5) !important;
-  font-size: 15px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--clr-neon);
-  border: var(--clr-neon) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  margin-left: 6px;
-  width: 130px;
-  height: 50px;
-
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-
-  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-
-  position: relative;
-}
-
-.login::before {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  background: var(--clr-neon);
-  top: 90%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  transform: perspective(3em) rotateX(40deg) scale(1, 0.35);
-  filter: blur(1em);
-  opacity: 0.7;
-}
-
-.login::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: 0 0 2em 0.5em var(--clr-neon);
-  opacity: 0;
-  background-color: var(--clr-neon);
-  z-index: -1;
-  transition: opacity 100ms linear;
-}
-
-.login:hover,
-.login:focus {
-  color: var(--clr-bg);
-  text-shadow: none;
-}
-
-.login:hover::before,
-.login:focus::before {
-  opacity: 1;
-}
-.login:hover::after,
-.login:focus::after {
-  opacity: 1;
-}
-h2 {
-            margin-top: -15px;
-            display: grid;
-            place-items: center;
-             font-family: 'zen tokyo zoo', sans-serif;
-             z-index: -1;
+            --clr-neon: #C780FA;
+            --clr-bg: hsl(0, 0%, 0%);
         }
-        h2{
-            font-size: 40px;
+        .signup {
+            letter-spacing: 3px;
             text-transform: uppercase;
-            color: #ffd9e2;
-            text-shadow: 0 0 0 transparent,
-                        0 0 10px #ff003c,
-                        0 0 20px rgba(255, 0, 60, 0.5),
-                        0 0 40px #ff003c,
-                        0 0 100px #ff003c,
-                        0 0 200px #ff003c,
-                        0 0 300px #ff003c,
-                        0 0 500px #ff003c,
-                        0 0 1000px #ff003c;
-
-                animation: animate 3s infinite alternate;
+            font-family: 'Varela Round';
+            background: #7F669D;
+            font-size: 15px;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            color: #F3BCC8;
+            border: #400E32;
+            padding: 0.25em 1em;
+            border-radius: 0.25em;
+            margin-left: 11px;
+            width: 130px;
+            height: 50px;
+            text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+            position: relative;
         }
-        .alert-danger {
-     height: 85px;
-    margin-left: 9px;
-    margin-bottom: -20px;
-    list-style-type: disc; 
-    padding-left: 20px; 
+
+        .signup::before {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            background: var(--clr-neon);
+            top: 90%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: perspective(3em) rotateX(40deg) scale(1, 0.35);
+            filter: blur(1em);
+            opacity: 0.7;
         }
-        .mb-3 label{
-    font-family: 'Outfit', sans-serif;
-    color: #ffffff;
-}
-input#photo.form-control{
-    width: 105px;
-}
-textarea#bio.form-control{
-    width: 300px;
-}
 
-@media (max-width: 768px) {
-    .box {
-        margin-top: 30px;
-    }
+        .signup::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 2em 0.5em var(--clr-neon);
+            opacity: 0;
+            background-color: #7F669D;
+            z-index: -1;
+            transition: opacity 100ms linear;
+        }
 
-    .box p {
-        font-size: 70px;
-    }
+        .signup:hover,
+        .signup:focus {
+            color: #fff;
+            text-shadow: none;
+        }
 
-    .signup-form {
-        margin-top: 40px !important;
-    }
-}
+        .signup:hover::before,
+        .signup:focus::before {
+            opacity: 1;
+        }
+        .signup:hover::after,
+        .signup:focus::after {
+            opacity: 1;
+        }
+        .login {
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: 'Varela Round';
+            background: #7F669D;
+            font-size: 15px;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            color: #F3BCC8;
+            border: #400E32;
+            padding: 0.25em 1em;
+            border-radius: 0.25em;
+            margin-left: 6px;
+            width: 130px;
+            height: 50px;
+            text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+            position: relative;
+        }
 
-@media (max-width: 576px) {
-    .box p {
-        font-size: 60px;
-    }
+        .login::before {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            background: var(--clr-neon);
+            top: 90%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: perspective(3em) rotateX(40deg) scale(1, 0.35);
+            filter: blur(1em);
+            opacity: 0.7;
+        }
 
-    .signup-form {
-        margin-top: 40px !important;
-    }
-}
+        .login::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 2em 0.5em var(--clr-neon);
+            opacity: 0;
+            background-color: #7F669D;
+            z-index: -1;
+            transition: opacity 100ms linear;
+        }
 
-    </style>
-</head>
+        .login:hover,
+        .login:focus {
+            color: #fff;
+            text-shadow: none;
+        }
 
-<body>
-    <div class="box">
-        <p>LIMELIGHT</p>
-    </div>
+        .login:hover::before,
+        .login:focus::before {
+            opacity: 1;
+        }
+        .login:hover::after,
+        .login:focus::after {
+            opacity: 1;
+        }
+        h2 {
+                    margin-top: -15px;
+                    display: grid;
+                    place-items: center;
+                    font-family: 'Varela Round', sans-serif;
+                    z-index: -1;
+                }
+                h2{
+                    font-size: 40px;
+                    text-transform: uppercase;
+                    color: #FBF1D3;
+                    animation: animate 3s infinite alternate;
+                }
+            .alert-danger {
+                height: 85px;
+                margin-left: 9px;
+                margin-bottom: -20px;
+                list-style-type: disc; 
+                padding-left: 20px; 
+                }
+            .mb-3 label{
+                font-family: 'Outfit', sans-serif;
+                color: #ffffff;
+            }
+        input#photo.form-control{
+            width: 105px;
+        }
+        textarea#bio.form-control{
+            width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                margin-top: 30px;
+            }
+
+            .box p {
+                font-size: 70px;
+            }
+
+            .signup-form {
+                margin-top: 40px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .box p {
+                font-size: 60px;
+            }
+
+            .signup-form {
+                margin-top: 40px !important;
+            }
+        }
+
+            </style>
+        </head>
+
+        <body>
+            <div class="box">
+                <p>SHOPHEAR</p>
+            </div>
 
 
     <h2>Sign Up</h2>
@@ -414,7 +387,7 @@ textarea#bio.form-control{
                     <div class="mt-3 text-center d-flex flex-column align-items-center">
                         <div class="btn-group">
                             <button type="submit" id="signup" name="signup" class="signup">Sign Up</button>
-                            <span class="or-divider">already have an account?>>></span>
+                            <span class="or-divider">already have an account? >></span>
                             <button type="button" onclick="window.location.href='login.php'" class="login">Login</button>
                         </div>
                     </div>
